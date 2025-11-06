@@ -1,0 +1,7 @@
+title: "CONQ34 – AIO 2025 Blog"
+description: "Nhật ký học Machine Learning của nhóm CONQ34 – AIO 2025"
+theme: minima
+author: Uyên Tran
+markdown: kramdown
+plugins:
+  - jekyll-feed
