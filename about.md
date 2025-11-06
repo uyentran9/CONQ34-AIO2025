@@ -21,5 +21,7 @@ permalink: /about/
 
 ---
 
-[🏠 Về trang chủ]({{ '/' | relative_"https://uyentran9.github.io" }})
+[🏠 Về trang chủ]({{ site.baseurl }}/)
+baseurl: "/CONQ34-AIO2025"
+
 
