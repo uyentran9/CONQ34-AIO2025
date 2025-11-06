@@ -3,7 +3,7 @@ layout: page
 title: Team
 permalink: /team/
 ---
-Danh sách thành viên & vai trò (cập nhật dần…)
+Danh sách thành viên & vai trò (cập nhật dần…)  
 **Các thành viên của nhóm mình:**  
 - 👸 **Leader: Nguyễn thị Mai Loan**  
 - **Thành viên:**  
