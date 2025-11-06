@@ -16,9 +16,9 @@ permalink: /about/
 ---
 
 > “Học tập – Kết nối – Cùng nhau tiến bộ.”  
-> *Mỗi bài viết là một dấu chân nhỏ trên hành trình khám phá AI & Machine Learning.*
+> *Mỗi bài viết là một dấu chân nhỏ trên hành trình khám phá AI (Machine Learning, Deep Learning, Graph Neural Networks, LLM, NLP, etc).*  
 
 
 ---
 
-[🏠 Quay lại trang chủ](../index.md)
+[🏠 Quay lại trang chủ](../index.md)  
