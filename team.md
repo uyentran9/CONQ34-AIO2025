@@ -9,7 +9,7 @@ Danh sách thành viên & vai trò (cập nhật dần…)
 - **Thành viên:**  
   - 👩 Trần Thị Mỹ Uyên *(Uyen Tran, Victoria Tran)*  
   - 👱 Lâm Lê  
-  - 👱‍♂️ Nguyên Bùi  
+  - 👱‍♂️ Bùi Đăng Nguyên 
 
 
 ---
