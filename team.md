@@ -4,10 +4,13 @@ title: Team
 permalink: /team/
 ---
 Danh sách thành viên & vai trò (cập nhật dần…)
-Nguyễn Thị Mai Loan
-Trần Thị Mỹ Uyên (Uyen Tran, Victoria Tran)
-Lâm Lê
-Nguyên Bùi
+**Các thành viên của nhóm mình:**  
+- 👸 **Leader: Nguyễn thị Mai Loan**  
+- **Thành viên:**  
+  - 👩 Trần Thị Mỹ Uyên *(Uyen Tran, Victoria Tran)*  
+  - 👱 Lâm Lê  
+  - 👱‍♂️ Nguyên Bùi  
+
 
 ---
 
