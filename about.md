@@ -21,7 +21,7 @@ permalink: /about/
 
 ---
 
-[🏠 Về trang chủ]({{ site.baseurl }}/)
-baseurl: "/CONQ34-AIO2025"
+[🏠 Về trang chủ]({{ '/' | relative_url }})  
+
 
 
