@@ -9,6 +9,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 header_pages:
+  - index.md
   - about.md
   - modules.md
   - team.md
