@@ -21,4 +21,5 @@ permalink: /about/
 
 ---
 
-[🏠 Quay lại trang chủ](../index.md)  
+[🏠 Về trang chủ]({{ '/' | relative_"https://uyentran9.github.io" }})
+
