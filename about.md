@@ -12,3 +12,8 @@ permalink: /about/
   - 👩 Trần Thị Mỹ Uyên *(Uyen Tran, Victoria Tran)*  
   - 👱 Lâm Lê  
   - 👱‍♂️ Nguyên Bùi  
+
+---
+
+> “Học tập – Kết nối – Cùng nhau tiến bộ.”  
+> *Mỗi bài viết là một dấu chân nhỏ trên hành trình khám phá AI & Machine Learning.*
