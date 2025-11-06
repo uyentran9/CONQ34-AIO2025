@@ -6,6 +6,11 @@ baseurl: "/CONQ34-AIO2025"
 
 author: Uyen Tran (Victoria Tran)
 markdown: kramdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
 plugins:
   - jekyll-feed
 header_pages:
