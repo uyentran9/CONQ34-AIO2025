@@ -1,5 +1,11 @@
 ---
 layout: home
+title: Home
+---
+
+
+---
+layout: home
 title: "🎓 CONQ34 – AIO 2025 Blog"
 ---
 
