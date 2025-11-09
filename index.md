@@ -5,13 +5,14 @@ permalink: /
 ---
 
 <!-- Hero banner -->
-<div class="hero-landing">
-  <img src="{{ '/assets/img/brand/header-ai.jpg' | relative_url }}" alt="CONQ34 – AIO 2025 banner">
-  <div class="hero-overlay">
-    <h1>CONQ34 – AIO 2025</h1>
-    <p>Học Logistic Regression, Vectorization & hơn thế nữa 🚀</p>
+<div class="hero-wrap">
+  <div class="hero-img" style="background-image:url('{{ "/assets/img/brand/header-ai.jpg" | relative_url }}');"></div>
+  <div class="hero-content">
+    <div class="hero-title">CONQ34 – AIO 2025</div>
+    <div class="hero-sub">Nhật ký học AI của nhóm • Logistic Regression & hơn thế nữa 🚀</div>
   </div>
 </div>
+
 
 
 Chào mừng đến với blog học AI của nhóm **CONQ34 – AIO 2025** 🌱  
