@@ -24,11 +24,6 @@ Các bài viết mới nhất sẽ hiện ngay bên dưới.
 
 ---  
 
-👉 Xem bài viết đầu tiên của nhóm:  
-[Module 6 – Tuần 1 🎯]({{ site.baseurl }}{% post_url 2025-11-03-module6-week1 %})
-
----  
-
 ## Posts
 
 <div class="post-grid">
