@@ -1,13 +1,27 @@
 <!-- MathJax for LaTeX in posts -->
+<!-- Enable MathJax -->
 <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$']]
-    },
-    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
-  };
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "tex2jax_process"
+  }
+};
 </script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+
+<script type="text/javascript" async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
+<style>
+mjx-container {
+  font-size: 1.05em;
+  color: #d8c2ff; /* tím pastel nhẹ */
+}
+</style>
