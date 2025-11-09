@@ -4,6 +4,14 @@ title: "🎓 CONQ34 – AIO 2025 Blog"
 permalink: /
 ---
 
+<div class="home-hero">
+  <img src="{{ '/assets/img/brand/header-ai.jpg' | relative_url }}" alt="CONQ34 – AIO 2025">
+  <div class="home-hero__overlay">
+    <h1>CONQ34 – AIO 2025</h1>
+    <p>Nhật ký học AI của nhóm • Logistic Regression & hơn thế nữa 🚀</p>
+  </div>
+</div>
+
 Chào mừng đến với blog học AI của nhóm **CONQ34 – AIO 2025** 🌱  
 Đây là nơi chúng mình chia sẻ kiến thức AI và các dự án của nhóm.   
 Các bài viết mới nhất sẽ hiện ngay bên dưới.  
