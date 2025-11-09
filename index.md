@@ -1,6 +1,6 @@
 ---  
 
-layout: home
+layout: page
 title: "🎓 CONQ34 – AIO 2025 Blog"
 permalink: /
 ---  
