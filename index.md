@@ -38,7 +38,6 @@ Các bài viết mới nhất sẽ hiện ngay bên dưới.
         <img src="{{ '/assets/module6-week1/BCE.png' | relative_url }}" alt="{{ post.title | escape }}">
       {% endif %}
     </div>
-
     <div class="meta">
       <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
       <h3 class="title">{{ post.title }}</h3>
