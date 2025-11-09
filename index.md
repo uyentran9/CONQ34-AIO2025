@@ -1,4 +1,6 @@
 ---
+{::options parse_block_html="true" /}
+
 layout: home
 title: "🎓 CONQ34 – AIO 2025 Blog"
 permalink: /
@@ -20,8 +22,36 @@ Chào mừng đến với blog học AI của nhóm **CONQ34 – AIO 2025** 🌱
 Đây là nơi chúng mình chia sẻ kiến thức AI và các dự án của nhóm.   
 Các bài viết mới nhất sẽ hiện ngay bên dưới.  
 
+---  
+
 👉 Xem bài viết đầu tiên của nhóm:  
 [Module 6 – Tuần 1 🎯]({{ site.baseurl }}{% post_url 2025-11-03-module6-week1 %})
 
+---  
 
+## Posts
+
+<div class="post-grid">
+  {% assign posts = site.posts | where_exp: "p", "p.draft != true" %}
+  {% for post in posts %}
+  <a class="post-card" href="{{ post.url | relative_url }}">
+    <div class="thumb-wrap">
+      {% if post.image %}
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
+      {% else %}
+        <!-- fallback nếu chưa có image -->
+        <img src="{{ '/assets/module6-week1/BCE.png' | relative_url }}" alt="{{ post.title | escape }}">
+      {% endif %}
+    </div>
+
+    <div class="meta">
+      <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
+      <h3 class="title">{{ post.title }}</h3>
+      {% if post.excerpt %}
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      {% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</div>
 
