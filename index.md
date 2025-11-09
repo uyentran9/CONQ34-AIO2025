@@ -3,9 +3,9 @@
 layout: page
 title: "🎓 CONQ34 – AIO 2025 Blog"
 permalink: /
+
 ---  
 
-{:options parse_block_html="true" /}
 
 <!-- Hero Banner -->
 <div class="hero-landing">
