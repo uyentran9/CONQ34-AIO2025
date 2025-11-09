@@ -20,8 +20,18 @@ window.MathJax = {
 </script>
 
 <style>
-mjx-container {
-  font-size: 1.05em;
-  color: #d8c2ff; /* tím pastel nhẹ */
+/* Áp dụng cho tất cả công thức MathJax (inline và block) */
+mjx-container[jax="CHTML"] {
+  font-size: 1.1em;
+  color: #cc0000; /* đỏ đậm classic */
+}
+
+/* Tùy chọn: công thức dạng block ($$...$$) có thể to và nổi bật hơn một chút */
+mjx-container[jax="CHTML"][display="true"] {
+  color: #b30000; /* đỏ trầm hơn nhẹ */
+  font-weight: 600;
+  margin: 0.8em 0;
+  text-align: center;
 }
 </style>
+
