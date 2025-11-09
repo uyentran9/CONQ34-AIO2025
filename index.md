@@ -4,15 +4,15 @@ title: "🎓 CONQ34 – AIO 2025 Blog"
 permalink: /
 ---
 
-
 <!-- Hero Banner -->
 <div class="hero-landing">
-  <img src="{{ '/assets/img/brand/header-ai.jpg' | relative_url }}" alt="CONQ34 – AIO 2025 banner">
+  <img src="{{ '/assets/module6-week1/assets/img/brand/header-ai.jpg' | relative_url }}" alt="CONQ34 – AIO 2025 banner">
   <div class="hero-overlay">
     <h1>CONQ34 – AIO 2025</h1>
     <p>Học Logistic Regression, Vectorization & hơn thế nữa 🚀</p>
   </div>
 </div>
+
 
 
 
