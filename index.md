@@ -27,7 +27,9 @@ Các bài viết mới nhất sẽ hiện ngay bên dưới.
 ## Posts
 
 <div class="post-grid">
-  {% assign posts = site.posts | where_exp: "p", "p.draft != true" %}
+  {% assign posts = site.posts 
+   | where_exp: "p", "p.draft != true" 
+   | sort: "date" %}  
   {% for post in posts %}
   <a class="post-card" href="{{ post.url | relative_url }}">
     <div class="thumb-wrap">
