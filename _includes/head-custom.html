@@ -25,7 +25,7 @@ window.MathJax = {
 
 </style>
 
-<!-- ================= GOOGLE TRANSLATE ================= -->
+<!-- ========= GOOGLE TRANSLATE + NÚT EN / VI ========= -->
 
 <!-- Ẩn banner dài ở trên cùng mà Google tự chèn -->
 <style>
@@ -35,26 +35,66 @@ window.MathJax = {
   body {
     top: 0 !important;
   }
+
+  /* Ẩn giao diện gốc của Google Translate (dropdown + chữ) */
+  #google_translate_element {
+    display: none !important;
+  }
+
+  /* Style cho khung nút chuyển ngôn ngữ */
+  #lang-switch-wrapper {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: #ffffff;
+    padding: 4px 8px;
+    border-radius: 999px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    font-size: 13px;
+  }
+
+  #lang-switch-wrapper .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  #lang-switch-wrapper .lang-switch button {
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    border-radius: 999px;
+    padding: 3px 10px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  #lang-switch-wrapper .lang-switch button.active {
+    background: #111827;
+    color: #ffffff;
+    border-color: #111827;
+    font-weight: 600;
+  }
 </style>
 
 <script type="text/javascript">
-  // Tạo div để chứa widget Google Translate sau khi trang load xong
+  // Tạo khung chứa NÚT + widget Google (widget ẩn)
   function createGoogleTranslateDiv() {
-    if (document.getElementById('google_translate_element')) return;
+    if (document.getElementById('lang-switch-wrapper')) return;
 
-    var div = document.createElement('div');
-    div.id = 'google_translate_element';
-    div.style.position = 'fixed';
-    div.style.top = '10px';
-    div.style.right = '10px';
-    div.style.zIndex = '9999';
-    div.style.background = 'white';
-    div.style.padding = '4px 6px';
-    div.style.borderRadius = '4px';
-    div.style.boxShadow = '0 0 4px rgba(0,0,0,0.15)';
-    div.style.fontSize = '12px';
+    var wrapper = document.createElement('div');
+    wrapper.id = 'lang-switch-wrapper';
 
-    document.body.appendChild(div);
+    wrapper.innerHTML = `
+      <div class="lang-switch">
+        <span style="margin-right:4px;">🌐</span>
+        <button type="button" data-lang="vi" class="active" onclick="doGTranslate('vi|vi')">VI</button>
+        <button type="button" data-lang="en" onclick="doGTranslate('vi|en')">EN</button>
+      </div>
+      <div id="google_translate_element"></div>
+    `;
+
+    document.body.appendChild(wrapper);
   }
 
   // Hàm Google gọi sau khi script dịch load xong
@@ -63,9 +103,9 @@ window.MathJax = {
 
     new google.translate.TranslateElement(
       {
-        pageLanguage: 'vi',          // 👈 blog gốc là TIẾNG VIỆT
+        pageLanguage: 'vi',          // blog gốc là TIẾNG VIỆT
         includedLanguages: 'vi,en',  // chỉ cho phép VI <-> EN
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        autoDisplay: false
       },
       'google_translate_element'
     );
@@ -73,6 +113,48 @@ window.MathJax = {
 
   // Đảm bảo div được tạo sau khi DOM sẵn sàng
   document.addEventListener('DOMContentLoaded', createGoogleTranslateDiv);
+
+  // ================== HỖ TRỢ NÚT EN / VI ==================
+  function GTranslateFireEvent(element, event) {
+    try {
+      if (document.createEvent) {
+        var evt = document.createEvent('HTMLEvents');
+        evt.initEvent(event, true, true);
+        element.dispatchEvent(evt);
+      } else {
+        var evt = document.createEventObject();
+        element.fireEvent('on' + event, evt);
+      }
+    } catch (e) {}
+  }
+
+  function doGTranslate(lang_pair) {
+    if (lang_pair.value) lang_pair = lang_pair.value;
+    if (lang_pair === '') return;
+
+    var lang = lang_pair.split('|')[1];
+    var select = document.querySelector('select.goog-te-combo');
+
+    // Chờ widget Google tạo xong select
+    if (!select) {
+      setTimeout(function () { doGTranslate(lang_pair); }, 500);
+      return;
+    }
+
+    // Đổi ngôn ngữ trong select (Google xử lý phần còn lại)
+    select.value = lang;
+    GTranslateFireEvent(select, 'change');
+
+    // Đổi trạng thái active của nút
+    var buttons = document.querySelectorAll('#lang-switch-wrapper .lang-switch button');
+    buttons.forEach(function (btn) {
+      if (btn.getAttribute('data-lang') === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
 </script>
 
 <!-- Script chính của Google Translate -->
