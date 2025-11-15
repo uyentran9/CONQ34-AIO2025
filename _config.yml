@@ -37,3 +37,9 @@ header_pages:
   - about.md
   - modules.md
   - team.md
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
