@@ -9,7 +9,7 @@ image: /assets/module6-week1/m6w1.jpg
 
 <div id="lang-switch-static">
   <span>🌐</span>
-  <a href="/CONQ34-AIO2025/2025/11/03/module6-week1-en.html">EN</a>
+  <a href="/CONQ34-AIO2025/2025/11/03/module6-week1-vi.html">EN</a>
   <a class="active" href="#">VI</a>
 </div>
 
