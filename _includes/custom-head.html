@@ -25,10 +25,9 @@ window.MathJax = {
 
 </style>
 
-<!-- ========= GOOGLE TRANSLATE + NÚT EN / VI ========= -->
+/* ==== GOOGLE TRANSLATE + NÚT EN / VI ==== */
 
-<!-- Ẩn banner dài ở trên cùng mà Google tự chèn -->
-<style>
+  /* Ẩn banner dài Google tự chèn trên cùng */
   .goog-te-banner-frame.skiptranslate {
     display: none !important;
   }
@@ -41,38 +40,48 @@ window.MathJax = {
     display: none !important;
   }
 
-  /* Style cho khung nút chuyển ngôn ngữ */
+  /* 🎨 Thanh switch đẹp, nhỏ, góc dưới bên phải */
   #lang-switch-wrapper {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    bottom: 16px;
+    right: 16px;
     z-index: 9999;
-    background: #ffffff;
-    padding: 4px 8px;
+    background: rgba(17, 24, 39, 0.92); /* nền đen hơi trong */
+    padding: 6px 10px;
     border-radius: 999px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
     font-size: 13px;
   }
 
   #lang-switch-wrapper .lang-switch {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    color: #e5e7eb;
+  }
+
+  #lang-switch-wrapper .lang-switch span {
+    font-size: 14px;
   }
 
   #lang-switch-wrapper .lang-switch button {
-    border: 1px solid #e5e7eb;
-    background: #f9fafb;
+    border: none;
+    background: transparent;
     border-radius: 999px;
-    padding: 3px 10px;
+    padding: 4px 10px;
     cursor: pointer;
     font-size: 12px;
+    color: #e5e7eb;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  #lang-switch-wrapper .lang-switch button:hover {
+    background: rgba(249, 250, 251, 0.12);
   }
 
   #lang-switch-wrapper .lang-switch button.active {
-    background: #111827;
-    color: #ffffff;
-    border-color: #111827;
+    background: #f9fafb;
+    color: #111827;
     font-weight: 600;
   }
 </style>
@@ -88,8 +97,10 @@ window.MathJax = {
     wrapper.innerHTML = `
       <div class="lang-switch">
         <span style="margin-right:4px;">🌐</span>
-        <button type="button" data-lang="vi" class="active" onclick="doGTranslate('vi|vi')">VI</button>
-        <button type="button" data-lang="en" onclick="doGTranslate('vi|en')">EN</button>
+        <button type="button" data-lang="vi" class="active"
+                onclick="doGTranslate('vi|vi')">VI</button>
+        <button type="button" data-lang="en"
+                onclick="doGTranslate('vi|en')">EN</button>
       </div>
       <div id="google_translate_element"></div>
     `;
