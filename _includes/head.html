@@ -1,0 +1,15 @@
+{% comment %} 
+This file overrides Minima's default head and loads head-custom.html 
+{% endcomment %}
+
+<head>
+  <meta charset="utf-8">
+
+  {%- seo -%}
+
+  <!-- Load Minima default assets -->
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+
+  <!-- Load custom overrides -->
+  {% include head-custom.html %}
+</head>
