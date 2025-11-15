@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Module 6 – Week 1
-date: 06-11-2025
+title: Module 6 – Tuần 1
+date: 2025-11-06
 categories: AIO2025 Module6 Deep Learning
-use_math:  true
+use_math: true
 image: /assets/module6-week1/m6w1.jpg
 ---
 
 <div id="lang-switch-static">
   <span>🌐</span>
-  <a class="active" href="#">EN</a>
-  <a href="{{ page.url | replace:'-en','-vi' }}">VI</a>
+  <a href="/CONQ34-AIO2025/2025/11/03/module6-week1-en.html">EN</a>
+  <a class="active" href="#">VI</a>
 </div>
 
 {% include mathjax.html %}
