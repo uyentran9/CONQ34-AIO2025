@@ -15,10 +15,13 @@ baseurl: "/CONQ34-AIO2025"
 # Theme and Markdown Engine
 # =========================
 theme: minima
+
 markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
+  hard_wrap: false
+  parse_block_html: true
   syntax_highlighter_opts:
     block:
       line_numbers: false
@@ -38,8 +41,4 @@ header_pages:
   - modules.md
   - team.md
 
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-  parse_block_html: true
+
