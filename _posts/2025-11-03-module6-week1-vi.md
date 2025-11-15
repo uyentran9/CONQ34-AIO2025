@@ -7,6 +7,12 @@ use_math:  true
 image: /assets/module6-week1/m6w1.jpg
 ---
 
+<div id="lang-switch-static">
+  <span>🌐</span>
+  <a href="{{ page.url | replace:'-vi','-en' }}">EN</a>
+  <a class="active" href="#">VI</a>
+</div>
+
 {% include mathjax.html %}
 
 
