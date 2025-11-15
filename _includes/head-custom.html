@@ -24,3 +24,58 @@ window.MathJax = {
 }
 
 </style>
+
+<!-- ================= GOOGLE TRANSLATE ================= -->
+
+<!-- Ẩn banner dài ở trên cùng mà Google tự chèn -->
+<style>
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+  body {
+    top: 0 !important;
+  }
+</style>
+
+<script type="text/javascript">
+  // Tạo div để chứa widget Google Translate sau khi trang load xong
+  function createGoogleTranslateDiv() {
+    if (document.getElementById('google_translate_element')) return;
+
+    var div = document.createElement('div');
+    div.id = 'google_translate_element';
+    div.style.position = 'fixed';
+    div.style.top = '10px';
+    div.style.right = '10px';
+    div.style.zIndex = '9999';
+    div.style.background = 'white';
+    div.style.padding = '4px 6px';
+    div.style.borderRadius = '4px';
+    div.style.boxShadow = '0 0 4px rgba(0,0,0,0.15)';
+    div.style.fontSize = '12px';
+
+    document.body.appendChild(div);
+  }
+
+  // Hàm Google gọi sau khi script dịch load xong
+  function googleTranslateElementInit() {
+    createGoogleTranslateDiv();
+
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'vi',          // 👈 blog gốc là TIẾNG VIỆT
+        includedLanguages: 'vi,en',  // chỉ cho phép VI <-> EN
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
+      'google_translate_element'
+    );
+  }
+
+  // Đảm bảo div được tạo sau khi DOM sẵn sàng
+  document.addEventListener('DOMContentLoaded', createGoogleTranslateDiv);
+</script>
+
+<!-- Script chính của Google Translate -->
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
