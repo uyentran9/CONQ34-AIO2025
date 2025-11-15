@@ -23,79 +23,35 @@ window.MathJax = {
   color: #dc2626 !important; /* Uyên thêm vào để áp dụng cho toàn bộ công thức */
 }
 
-/* ====== WIDGET ĐỔI EN / VI (KHÔNG DÙNG GOOGLE TRANSLATE) ====== */
-
-#lang-switch-wrapper {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  z-index: 9999;
-  background: rgba(17, 24, 39, 0.92);
-  padding: 6px 10px;
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-  font-size: 13px;
+/* ===== WIDGET CHUYỂN NGÔN NGỮ TĨNH (VI/EN) ===== */
+#lang-switch-static {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 9999;
+    background: rgba(17,24,39,0.92);
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 13px;
 }
 
-#lang-switch-wrapper .lang-switch {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #e5e7eb;
+#lang-switch-static a {
+    padding: 4px 8px;
+    border-radius: 999px;
+    color: #e5e7eb;
+    text-decoration: none;
+    transition: 0.15s;
 }
 
-#lang-switch-wrapper .lang-switch span {
-  font-size: 14px;
+#lang-switch-static a:hover {
+    background: rgba(249,250,251,0.12);
 }
 
-#lang-switch-wrapper .lang-switch a {
-  text-decoration: none;
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 12px;
-  color: #e5e7eb;
-  transition: background 0.15s ease, color 0.15s ease;
+#lang-switch-static a.active {
+    background: #f9fafb;
+    color: #111827;
+    font-weight: bold;
 }
-
-#lang-switch-wrapper .lang-switch a:hover {
-  background: rgba(249, 250, 251, 0.12);
-}
-
-#lang-switch-wrapper .lang-switch a.active {
-  background: #f9fafb;
-  color: #111827;
-  font-weight: 600;
-}
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Nếu đã có widget thì thôi
-    if (document.getElementById('lang-switch-wrapper')) return;
-
-    var wrapper = document.createElement('div');
-    wrapper.id = 'lang-switch-wrapper';
-
-    var currentLang = "{{ page.lang | default: 'vi' }}";
-    var altUrl = "{{ page.alt_lang_url | default: page.url }}";
-
-    // Nếu chưa cấu hình alt_lang_url thì vẫn tạo widget,
-    // nhưng link EN sẽ trỏ về chính trang hiện tại (để test giao diện).
-    wrapper.innerHTML = `
-      <div class="lang-switch">
-        <span>🌐</span>
-        <a href="{{ page.url | relative_url }}"
-           class="${currentLang === 'vi' ? 'active' : ''}">
-          VI
-        </a>
-        <a href="${altUrl}"
-           class="${currentLang === 'en' ? 'active' : ''}">
-          EN
-        </a>
-      </div>
-    `;
-
-    document.body.appendChild(wrapper);
-  });
-</script>
 
