@@ -21,7 +21,7 @@ kramdown:
   input: GFM
   math_engine: mathjax
   hard_wrap: false
-  parse_block_html: true
+  parse_block_html: false
   syntax_highlighter_opts:
     block:
       line_numbers: false
