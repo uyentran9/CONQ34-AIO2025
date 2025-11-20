@@ -27,14 +27,16 @@ Các bài viết mới nhất sẽ hiện ngay bên dưới.
   {% assign posts = site.posts 
    | where_exp: "p", "p.draft != true" 
    | sort: "date" %}  
+  
   {% for post in posts %}
   <div class="post-card">
     <a href="{{ post.url | relative_url }}" class="post-link">
       <div class="thumb-wrap">
         {% if post.image %}
           <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
-      </div>
         {% endif %}
+      </div>
+      
       <div class="meta">
         <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
         <h3 class="title">{{ post.title }}</h3>
