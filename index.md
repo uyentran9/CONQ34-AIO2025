@@ -33,11 +33,8 @@ Các bài viết mới nhất sẽ hiện ngay bên dưới.
       <div class="thumb-wrap">
         {% if post.image %}
           <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
-        {% else %}
-          <!-- fallback nếu chưa có image -->
-          <img src="{{ '/assets/module6-week1/BCE.png' | relative_url }}" alt="{{ post.title | escape }}">
-        {% endif %}
       </div>
+        {% endif %}
       <div class="meta">
         <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
         <h3 class="title">{{ post.title }}</h3>
