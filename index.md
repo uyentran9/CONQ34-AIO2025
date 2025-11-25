@@ -6,7 +6,7 @@ permalink: /
 
 <!-- Hero Banner -->
 <div class="hero-landing">
-  <img src="{{ '/assets/module6-week1/assets/img/brand/header-ai.jpg' | relative_url }}" alt="CONQ34 – AIO 2025 banner" width="80%">
+  <img src="{{ '/assets/module6-week1/assets/img/brand/header-ai.jpg' | relative_url }}" alt="CONQ34 – AIO 2025 banner" width="100%">
   <div class="hero-overlay">
     <h1>CONQ34 – AIO 2025</h1>
     <p>Học AI & Hơn thế nữa 🚀</p>
